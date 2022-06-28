@@ -60,6 +60,9 @@ RUN \
 # add local files
 COPY root/ /
 
+RUN chmod +x /etc/services.d/apiping/run
+RUN chmod +x /etc/services.d/deluged/run
+RUN chmod +x /etc/services.d/deluge-web/run
 # ports and volumes
 EXPOSE 8112 58846 58946 58946/udp
 VOLUME /config
